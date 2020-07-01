@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500&display=swap&subset=latin-ext');
+/* font-family: 'Oswald', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+/* font-family: 'Cinzel', serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+}
+
+/* ANIMATIONSs */
+@keyframes slideDown {
+
+    100% {
+        transform: translate(0, 150%);
+    }
+
+}
+
+
+.wrapStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-basis: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    /* background: rgb(30, 54, 93);
+    background: linear-gradient(0deg, rgba(30, 54, 93, 1) 11%, rgba(15, 29, 55, 1) 53%, rgba(11, 25, 50, 1) 100%); */
+    position: relative;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+    opacity: .8;
+    display: none;
+}
+
+.columnImages {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.columnImages__imgChair {
+
+ position: absolute;
+ margin: auto;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ width: 100%;
+}
+
+.columnTexts {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+}
+
+.columnTexts__imgLogo {
+    width: 50%;
+    margin: 20px;
+    
+}
+
+.columnTexts__blockTypography {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.columnTexts_title {
+    font-size: 18px;
+    font-weight: 700;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.columnTexts__descriptionText {
+    font-size: 14px;
+    width: 80%;
+    text-align: justify;
+    
+}
+
+.columnTexts_button {
+    border: none;
+    border-radius: 10px;
+    background-color: #222;
+    color: white;
+    width: 100px;
+    height: 33px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 20px;
+    
+}
+
+
+/* SLIDE DOWN ICON */
+.columnImages__slideDown {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-60%, 0);
+    overflow: hidden;
+    text-align: center;
+}
+
+.columnImages__icon {
+    width: 60px;
+    color: red;
+    transform: scaleX(2);
+    animation: slideDown 1.7s linear infinite;
+}
+
+@media (orientation: portrait) and (max-width: 320px) {
+    .columnImages {
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .columnTexts {
+        width: 100vw;
+        height: 60vh;
+    }
+
+    .columnTexts__imgLogo {
+        margin: 15px;
+   }
+     
+    .columnTexts_title {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .columnTexts_button {
+        margin-top: 15px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 720px) {
+    .columnTexts__imgLogo {
+        margin: 30px;
+        width: 50%;
+   }
+     
+    .columnTexts_title {
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    
+    .columnTexts__descriptionText {
+        font-size: 18px;
+        width: 70%;      
+    }
+
+    .columnTexts_button {
+        margin-top: 30px;
+        width: 120px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 1024px) {
+    .columnTexts__imgLogo {
+        margin: 50px;
+        width: 50%;
+   }
+     
+    .columnTexts_title {
+        margin-bottom: 15px;
+        font-size: 35px;
+    }
+
+    
+    .columnTexts__descriptionText {
+        font-size: 24px;
+        width: 70%;      
+    }
+
+    .columnTexts_button {
+        margin-top: 30px;
+        width: 180px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+
+@media (orientation: landscape) {
+
+    .wrapStart {
+        flex-direction: row;
+        flex-direction: row-reverse;
+    }
+
+    .columnImages {
+        width: 50vw;
+        height: 100vh;
+        flex-direction: row;
+        background-color: #222;
+    }
+
+    .columnImages__imgChair {    
+         width: 100%;
+       }
+
+    .columnTexts {
+        width: 50vw;
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .columnTexts__imgLogo {
+        width: 50%;
+        margin: 20px;
+        
+    }
+    
+    .columnTexts__blockTypography {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .columnTexts_title {
+        font-size: 16px;
+        font-weight: 700;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    
+    .columnTexts__descriptionText {
+        font-size: 14px;
+        width: 80%;
+        text-align: justify;
+        
+    }
+    
+
+    .columnImages__slideDown {
+        left: 75%;
+        transform: translate(-75%, 0);
+    }
+}
+
+@media (orientation: landscape) and (max-height: 320px) {
+
+    .columnImages {
+        width: 40vw;
+    }
+
+    .columnTexts {
+        width: 60vw;
+    }
+
+    .columnTexts_title {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .columnTexts__descriptionText {
+        font-size: 14px;        
+    }
+
+    .columnTexts__imgLogo {
+        margin: 10px;
+    }
+
+    .columnTexts_button {
+        margin-top: 5px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .columnTexts__imgLogo {
+        margin: 30px;
+        width: 50%;
+   }
+     
+    .columnTexts_title {
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+
+    
+    .columnTexts__descriptionText {
+        font-size: 15px;
+        width: 70%;      
+    }
+
+    .columnTexts_button {
+        margin-top: 50px;
+        width: 120px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1300px) {
+    
+    .columnTexts__imgLogo {
+        margin-bottom: 60px;
+    }
+
+   .columnImages__imgChair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: inherit;
+    bottom: inherit;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+ 
+   }
+     
+    .columnTexts_title {
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    
+    .columnTexts__descriptionText {
+        font-size: 20px;
+        width: 70%;      
+    }
+
+    .columnTexts_button {
+        margin-top: 70px;
+    }
+}
