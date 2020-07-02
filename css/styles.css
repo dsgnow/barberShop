@@ -56,6 +56,7 @@
     /* background: rgb(30, 54, 93);
     background: linear-gradient(0deg, rgba(30, 54, 93, 1) 11%, rgba(15, 29, 55, 1) 53%, rgba(11, 25, 50, 1) 100%); */
     position: relative;
+
 }
 
 .nav {
@@ -168,7 +169,7 @@
 .columnTexts_buttonWrap {
     position: absolute;
     left: 50%;
-    bottom: 5%;
+    bottom: 2%;
     transform: translate(-50%, -50%);
     width: 100vw;
     background: rgb(255, 255, 255);
@@ -235,6 +236,20 @@
 
     .columnTexts_buttonWrap {
         bottom: 2%;
+    }
+}
+
+@media (orientation: portrait) and (max-height: 450px) {
+
+    .columnTexts_buttonWrap {
+        display: none;
+    }
+}
+
+@media (orientation: portrait) and (min-height: 500px) {
+
+    .columnTexts_buttonWrap {
+        bottom: 5%;
     }
 }
 
@@ -491,6 +506,8 @@
     height: 100vh;
     position: relative;
     background-color: #0b0b0d;
+    min-height: 550px;
+    min-width: 300px;
 }
 
 .columnImagesAbout {
