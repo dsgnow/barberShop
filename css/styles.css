@@ -104,8 +104,7 @@
 
 .columnTexts__imgLogo {
     width: 50%;
-    margin: 20px;
-
+    margin: 20px 0 10px;
 }
 
 .columnTexts__blockTypography {
@@ -123,6 +122,11 @@
     align-items: center;
     padding: 5px;
     margin-bottom: 10px;
+}
+
+.columnTexts_wrapTittle--white {
+    background-color: #0b0b0d;
+    margin-bottom: -5%;
 }
 
 .columnTexts_title {
@@ -158,6 +162,27 @@
     margin-top: 20px;
     transition: .3s;
     cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.columnTexts_buttonWrap {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(11, 11, 13, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    margin: 0 auto;
+}
+
+.columnTexts_button--white {
+    margin: 10px !important;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    opacity: 1;
+    vertical-align: center;
 }
 
 .columnTexts_button:hover {
@@ -173,7 +198,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-60%, 0);
+    transform: translate(-50%, 0);
     overflow: hidden;
     text-align: center;
 }
@@ -321,7 +346,7 @@
 
     .wrapStart__slideDown {
         left: 75%;
-        transform: translate(-75%, 0);
+        transform: translate(-50%, 0);
     }
 }
 
@@ -528,18 +553,37 @@
 
 
 .columnTextsAbout_title {
-    font-size: 25px;
+    font-size: 60px;
     font-family: 'Cinzel', serif;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .columnTextsAbout__descriptionText {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
 }
 
+@media (orientation: portrait) and (min-width: 375px) {
+
+    .columnTextsAbout_title {
+        font-size: 70px;
+    }
+
+}
+
+
 @media (orientation: portrait) and (min-height: 600px) {
+
+    .columnTextsAbout_title {
+        font-size: 70px;
+    }
+
+    .columnTextsAbout__descriptionText {
+        font-size: 13px;
+    }
+
+
     .columnImagesAbout {
         height: 50vh;
     }
@@ -552,17 +596,21 @@
 @media (orientation: portrait) and (min-width: 768px) {
 
     .columnTextsAbout__blockTypography {
-        width: 70%;
+        width: 60%;
     }
 
     .columnTextsAbout_title {
-        font-size: 90px;
+        font-size: 120px;
         margin-bottom: 10px;
     }
 
     .columnTextsAbout__descriptionText {
-        font-size: 22px;
+        font-size: 18px;
         text-align: justify;
+    }
+
+    .columnTexts_wrapTittle--white {
+        margin-bottom: -5%;
     }
 
     .columnTextsAbout__imgLogo {
@@ -585,7 +633,7 @@
     }
 
     .columnTextsAbout_title {
-        font-size: 110px;
+        font-size: 180px;
         margin-bottom: 10px;
     }
 
@@ -642,15 +690,21 @@
     }
 
     .columnTextsAbout_title {
-        font-size: 25px;
+        font-size: 50px;
         font-family: 'Cinzel', serif;
         font-weight: 700;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     .columnTextsAbout__descriptionText {
         font-size: 12px;
         text-align: center;
+    }
+
+    .columnTexts_buttonWrap {
+        left: 0;
+        transform: translate(0, -50%);
+        width: 50vw;
     }
 
     .columnTextsAbout__wrapIcons {
@@ -668,12 +722,12 @@
 @media (orientation: landscape) and (min-width: 640px) {
 
     .columnTextsAbout_title {
-        font-size: 30px;
-        margin-bottom: 10px;
+        font-size: 60px;
+        margin-bottom: 5px;
     }
 
     .columnTextsAbout__descriptionText {
-        font-size: 13px;
+        font-size: 12px;
         text-align: justify;
     }
 
@@ -696,18 +750,28 @@
 
 @media (orientation: landscape) and (min-width: 1024px) {
 
+    .columnTextsAbout__blockTypography {
+        width: 60%;
+        margin-right: 25%;
+    }
+
     .columnTextsAbout_title {
-        font-size: 60px;
+        font-size: 85px;
         margin-bottom: 20px;
     }
 
     .columnTextsAbout__descriptionText {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .columnTextsAbout__imgLogo {
         margin-top: 40px;
     }
+
+    .columnTexts_wrapTittle--white {
+        margin-bottom: -10%;
+    }
+
 
     .columnTextsAbout__wrapIcons {
         font-size: 30px;
@@ -721,11 +785,29 @@
 
 }
 
+@media (orientation: landscape) and (min-width: 1366px) {
+
+    .columnTexts_wrapTittle--white {
+        margin-bottom: -5%;
+    }
+
+
+    .columnTextsAbout_title {
+        font-size: 110px;
+    }
+
+    .columnTextsAbout__descriptionText {
+        font-size: 18px;
+    }
+
+}
+
 
 @media (orientation: landscape) and (min-width: 1400px) {
 
     .columnTextsAbout__blockTypography {
         width: 50%;
+        margin-right: 30%;
     }
 
     .columnImagesAbout__imgDawid {
@@ -737,8 +819,7 @@
     }
 
     .columnTextsAbout_title {
-        font-size: 100px;
-        margin-bottom: 20px;
+        font-size: 130px;
     }
 
     .columnTextsAbout__descriptionText {
