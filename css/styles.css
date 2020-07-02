@@ -70,7 +70,7 @@
 
 .columnImages {
     width: 100vw;
-    height: 50vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -92,7 +92,7 @@
 
 .columnTexts {
     width: 100vw;
-    height: 50vh;
+    height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -231,6 +231,10 @@
 
     .columnTexts_button {
         margin-top: 15px;
+    }
+
+    .columnTexts_buttonWrap {
+        bottom: 2%;
     }
 }
 
