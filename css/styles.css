@@ -684,6 +684,9 @@
     position: absolute;
     width: 100%;
     top: -10px;
+}
+
+.columnImagesAbout__imgDawid--active {
     animation: imgGrowInDawid linear 8s;
     animation-fill-mode: forwards;
 }
@@ -706,25 +709,36 @@
 
 .columnImagesAbout__text--large {
     opacity: 0;
-    animation: fadeIn 3s;
     color: #343338;
 }
+
+.columnImagesAbout__text--large.columnImagesAbout__text--fadeIn {
+    animation-delay: 0s;
+}
+
+
 
 .columnImagesAbout__text--mid {
     opacity: 0;
     color: #343338;
-    animation: fadeIn 3s;
+}
+
+.columnImagesAbout__text--mid.columnImagesAbout__text--fadeIn {
+
     animation-delay: 1s;
 }
 
 .columnImagesAbout__text--small {
     opacity: 0;
     color: #616064;
-    animation: fadeIn 3s;
+}
+
+.columnImagesAbout__text--small.columnImagesAbout__text--fadeIn {
     animation-delay: 2s;
 }
 
 .columnImagesAbout__text--fadeIn {
+    animation: fadeIn 3s;
     animation-fill-mode: forwards;
 }
 
