@@ -1,10 +1,29 @@
-const widerScreenWidth = window.matchMedia("(min-width: 1300px)");
-const startPageDescriptionTexts = document.querySelectorAll('.columnTexts__descriptionText')
+// appear elements when scroll //
+$(document).on('scroll', function () {
 
-if (widerScreenWidth.matches) {
+    const windowHeight = $(window).height();
+    const scrollValue = $(window).scrollTop();
 
-    startPageDescriptionTexts.forEach(function (element, index) {
-        element.classList.toggle("columnTexts__descriptionText--visible");
-    });
+    // about section //
 
-}
+    const $aboutBlockTexts = $('.columnTextsAbout__blockTypography');
+    const aboutBlockTextsFromTop = $aboutBlockTexts.offset().top;
+    const aboutBlockTextsHeight = $aboutBlockTexts.outerHeight();
+
+    const $aboutTitle = $('.columnTextsAbout_title');
+    const $aboutText = $('.columnTextsAbout__descriptionText')
+    const $aboutLogoElement = $('.columnTextsAbout__imgLogo')
+
+
+    if (scrollValue > aboutBlockTextsHeight + aboutBlockTextsFromTop - windowHeight - 200) {
+        $aboutTitle.addClass("columnTextsAbout_title--active");
+        $aboutText.addClass("columnTextsAbout__descriptionText--active");
+        $aboutLogoElement.addClass("columnTextsAbout__imgLogo--active");
+    }
+
+    //clean
+    if (scrollValue < 100) {
+
+    }
+
+})

@@ -12,19 +12,31 @@
     <header>
         <nav class="nav">
             <ul class="nav__list">
+                <li class="nav__element nav__element--selected">
+                    <a class="nav__link nav__link--start" href="#">Start</a></li>
                 <li class="nav__element">
-                    <a class="nav__link" href="#">Start</a></li>
+                    <a class="nav__link nav__link--about" href="#">O mnie</a></li>
                 <li class="nav__element">
-                    <a class="nav__link" href="#">O mnie</a></li>
+                    <a class="nav__link nav__link--plan" href="#">Plan</a></li>
                 <li class="nav__element">
-                    <a class="nav__link" href="#">Plan</a></li>
-                <li class="nav__element">
-                    <a class="nav__link" href="#">Kontakt</a></li>
+                    <a class="nav__link nav__link--contact" href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <nav class="navBurger">
+            <ul class="navBurger__list">
+                <li class="navBurger__element navBurger__element--selected">
+                    <a class="navBurger__link navBurger__link--start" href="#">Start</a></li>
+                <li class="navBurger__element">
+                    <a class="navBurger__link navBurger__link--about" href="#">O mnie</a></li>
+                <li class="navBurger__element">
+                    <a class="navBurger__link navBurger__link--plan" href="#">Plan</a></li>
+                <li class="navBurger__element">
+                    <a class="navBurger__link navBurger__link--contact" href="#">Kontakt</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="wrapStart">
+        <div class="wrapStart" data-section="nav__link--start">
             <section class="columnImages">
                 <img class="columnImages__imgChair" src="img/chair.jpg" alt="fotel fryzjerski">
             </section>
@@ -91,6 +103,7 @@
         </div>
     </main>
     <script src="https://kit.fontawesome.com/4b11486782.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
