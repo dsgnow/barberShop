@@ -21,8 +21,8 @@ $(document).on('scroll', function () {
 
     const fadeIntexts = document.querySelectorAll('.columnImagesAbout__text');
 
-    let orientation = window.screen.orientation;
-
+    // let orientation = window.screen.orientation;
+    /* change burger icon color on scroll */
     if ((scrollValue > aboutHeight + aboutFromTop - windowHeight - 50)) {
         $hambSpan.addClass('navBurger__span--white');
     } else {
@@ -39,9 +39,6 @@ $(document).on('scroll', function () {
             fadeInText.classList.add("columnImagesAbout__text--fadeIn");
         });
     }
-
-
-
 
 })
 
