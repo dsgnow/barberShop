@@ -6,6 +6,10 @@ $(document).on('scroll', function () {
 
     // about section //
 
+    const $about = $('.wrapAbout');
+    const aboutFromTop = $about.offset().top;
+    const aboutHeight = $about.outerHeight();
+
     const $aboutBlockTexts = $('.columnTextsAbout__blockTypography');
     const aboutBlockTextsFromTop = $aboutBlockTexts.offset().top;
     const aboutBlockTextsHeight = $aboutBlockTexts.outerHeight();
@@ -17,6 +21,13 @@ $(document).on('scroll', function () {
 
     const fadeIntexts = document.querySelectorAll('.columnImagesAbout__text');
 
+    let orientation = window.screen.orientation;
+
+    if ((scrollValue > aboutHeight + aboutFromTop - windowHeight - 50)) {
+        $hambSpan.addClass('navBurger__span--white');
+    } else {
+        $hambSpan.removeClass('navBurger__span--white');
+    }
 
     if (scrollValue > aboutBlockTextsHeight + aboutBlockTextsFromTop - windowHeight - 200) {
         $aboutTitle.addClass("columnTextsAbout_title--active");
@@ -29,27 +40,47 @@ $(document).on('scroll', function () {
         });
     }
 
-    //clean
-    if (scrollValue < 100) {
 
-    }
+
 
 })
 
 
 // animation to section when click menu //
-$('nav a').on('click', function () {
+$('nav a').on('click', function (e) {
+    e.preventDefault();
     const goToSection = "[data-sectionin=" + $(this).data('section') + "]";
     $('body, html').animate({
         scrollTop: $(goToSection).offset().top
     }, 500)
 })
 
-$('.hambPopup a').on('click', function () {
-    hambPop.classList.remove('show');
-    hambButtonI.classList.toggle('fa-times');
-    const goToSection = "[data-section=" + $(this).attr('class') + "]";
+const $hambPop = $('.navBurger');
+const $hambButton = $('.navBurger__btn');
+const $hambSpan = $('.navBurger__span');
+
+$('.navBurger a').on('click', function () {
+    $hambButton.toggleClass('navBurger__btn--active');
+    $hambButton.toggleClass('navBurger__btn--notActive');
+    $hambPop.toggleClass('navBurger__show');
+    $hambPop.toggleClass('navBurger__hide');
+    $hambSpan.toggleClass('navBurger__span--black');
+
+    const goToSection = "[data-sectionin=" + $(this).data('section') + "]";
     $('body, html').animate({
         scrollTop: $(goToSection).offset().top
     }, 500)
+})
+
+
+
+$('.navBurger__btn').on('click', function (e) {
+    e.preventDefault();
+    $hambButton.toggleClass('navBurger__btn--active');
+    $hambButton.toggleClass('navBurger__btn--notActive');
+    $hambSpan.toggleClass('navBurger__span--black');
+
+    $hambPop.toggleClass('navBurger__show');
+    $hambPop.toggleClass('navBurger__hide');
+    $hambPop.show();
 })
