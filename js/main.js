@@ -1,25 +1,65 @@
+/* navbar links */
+const linkStart = document.querySelector('.nav__link--start')
+const linkAbout = document.querySelector('.nav__link--about')
+const linkPlan = document.querySelector('.nav__link--plan')
+const linkContact = document.querySelector('.nav__link--contact')
+
+const clearLinksBorder = function () {
+    const linkElements = document.querySelectorAll('.nav__link');
+    linkElements.forEach(function (linkElement, index) {
+        linkElement.classList.remove("nav__link--selected");
+    });
+}
+
+// start section //
+const $start = $('.wrapStart');
+const startFromTop = $start.offset().top;
+const startHeight = $start.outerHeight();
+
+// about section //
+const $about = $('.wrapAbout');
+const aboutFromTop = $about.offset().top;
+const aboutHeight = $about.outerHeight();
+
+const $aboutBlockTexts = $('.columnTextsAbout__blockTypography');
+const aboutBlockTextsFromTop = $aboutBlockTexts.offset().top;
+const aboutBlockTextsHeight = $aboutBlockTexts.outerHeight();
+
+const $aboutTitle = $('.columnTextsAbout_title');
+const $aboutText = $('.columnTextsAbout__descriptionText')
+const $aboutLogoElement = $('.columnTextsAbout__imgLogo')
+const $aboutImageDawid = $('.columnImagesAbout__imgDawid')
+const fadeIntexts = document.querySelectorAll('.columnImagesAbout__text');
+
+// hamburger //
+const $hambPop = $('.navBurger');
+const $hambButton = $('.navBurger__btn');
+const $hambSpan = $('.navBurger__span');
+
+
 // appear elements when scroll //
 $(document).on('scroll', function () {
 
     const windowHeight = $(window).height();
     const scrollValue = $(window).scrollTop();
 
-    // about section //
+    // change link border on scroll //
+    if ((scrollValue < windowHeight)) {
+        clearLinksBorder();
+        linkStart.classList.add('nav__link--selected');
 
-    const $about = $('.wrapAbout');
-    const aboutFromTop = $about.offset().top;
-    const aboutHeight = $about.outerHeight();
+    } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 2)) {
+        clearLinksBorder();
+        linkAbout.classList.add('nav__link--selected');
 
-    const $aboutBlockTexts = $('.columnTextsAbout__blockTypography');
-    const aboutBlockTextsFromTop = $aboutBlockTexts.offset().top;
-    const aboutBlockTextsHeight = $aboutBlockTexts.outerHeight();
+    } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 3)) {
+        clearLinksBorder();
+        linkPlan.classList.add('nav__link--selected');
 
-    const $aboutTitle = $('.columnTextsAbout_title');
-    const $aboutText = $('.columnTextsAbout__descriptionText')
-    const $aboutLogoElement = $('.columnTextsAbout__imgLogo')
-    const $aboutImageDawid = $('.columnImagesAbout__imgDawid')
-
-    const fadeIntexts = document.querySelectorAll('.columnImagesAbout__text');
+    } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 4)) {
+        clearLinksBorder();
+        linkContact.classList.add('nav__link--selected');
+    }
 
     // let orientation = window.screen.orientation;
     /* change burger icon color on scroll */
@@ -42,7 +82,6 @@ $(document).on('scroll', function () {
 
 })
 
-
 // animation to section when click menu //
 $('nav a').on('click', function (e) {
     e.preventDefault();
@@ -50,11 +89,8 @@ $('nav a').on('click', function (e) {
     $('body, html').animate({
         scrollTop: $(goToSection).offset().top
     }, 500)
-})
 
-const $hambPop = $('.navBurger');
-const $hambButton = $('.navBurger__btn');
-const $hambSpan = $('.navBurger__span');
+})
 
 $('.navBurger a').on('click', function () {
     $hambButton.toggleClass('navBurger__btn--active');
@@ -68,8 +104,6 @@ $('.navBurger a').on('click', function () {
         scrollTop: $(goToSection).offset().top
     }, 500)
 })
-
-
 
 $('.navBurger__btn').on('click', function (e) {
     e.preventDefault();

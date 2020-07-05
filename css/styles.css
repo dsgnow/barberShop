@@ -95,6 +95,18 @@
     }
 }
 
+@keyframes addBorderLink {
+    0 {
+        border-bottom: none;
+    }
+
+    100% {
+        border-bottom: 2px solid white;
+        font-weight: 700;
+        transform: scale(1.1);
+    }
+}
+
 
 
 .wrapStart {
@@ -148,16 +160,19 @@
     line-height: 30px;
     width: 100%;
     transition: .3s;
+    border-bottom: 2px solid transparent;
 }
 
-.nav__element--selected {
-    border-bottom: 1px solid white;
+.nav__link--selected {
+    animation: addBorderLink ease-in .4s;
+    animation-fill-mode: forwards;
 }
 
-.nav__element:hover .nav__link {
+.nav__link:hover {
     font-weight: 700;
     transform: scale(1.1);
 }
+
 
 /* HAMBURGER NAV */
 
