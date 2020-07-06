@@ -113,7 +113,7 @@
 }
 
 @keyframes addBorderLink {
-    0 {
+    0% {
         border-bottom: none;
     }
 
@@ -124,6 +124,105 @@
     }
 }
 
+@keyframes addBorderLinkBlack {
+    0% {
+        border-bottom: none;
+    }
+
+    100% {
+        border-bottom: 2px solid black;
+        font-weight: 700;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes removalRight {
+    0% {
+        opacity: 1;
+        display: flex;
+        transform: translateX(0);
+
+    }
+
+    30% {
+        transform: translateX(0) scale(.8);
+        opacity: 1;
+
+    }
+
+
+    100% {
+        opacity: 0;
+        display: none;
+        transform: translateX(-200%) scale(.8);
+
+    }
+}
+
+@keyframes removalLeft {
+    0% {
+        opacity: 1;
+        display: flex;
+        transform: translateX(0);
+
+    }
+
+    30% {
+        transform: translateX(0) scale(.8);
+        opacity: 1;
+
+    }
+
+
+    100% {
+        opacity: 0;
+        display: none;
+        transform: translateX(200%) scale(.8);
+
+    }
+}
+
+@keyframes showInRight {
+    0% {
+        opacity: 1;
+        display: flex;
+        transform: translateX(200%) scale(.8);
+
+    }
+
+    55% {
+        transform: translateX(0) scale(.8);
+
+    }
+
+
+    100% {
+        display: flex;
+        transform: translateX(0) scale(1);
+
+    }
+}
+
+@keyframes showInLeft {
+    0% {
+        opacity: 1;
+        display: flex;
+        transform: translateX(-200%) scale(.8);
+
+    }
+
+    55% {
+        transform: translateX(0) scale(.8);
+
+    }
+
+
+    100% {
+        display: flex;
+        transform: translateX(0) scale(1);
+
+    }
+}
 
 
 .wrapStart {
@@ -146,10 +245,9 @@
     position: fixed;
     top: 0%;
     right: 0%;
-    width: 30vw;
+    width: 10vw;
     z-index: 9999;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 50%;
+    width: 35%;
 }
 
 .nav__list {
@@ -168,7 +266,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 25%;
 }
 
 .nav__link {
@@ -183,8 +281,17 @@
     border-bottom: 2px solid transparent;
 }
 
+.nav__link--black {
+    color: black;
+}
+
 .nav__link--selected {
     animation: addBorderLink ease-in .4s;
+    animation-fill-mode: forwards;
+}
+
+.nav__link--selected.nav__link--black {
+    animation: addBorderLinkBlack ease-in .4s;
     animation-fill-mode: forwards;
 }
 
@@ -1415,11 +1522,41 @@
 
 .offer__option {
     display: none;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: justify;
     width: 90%;
+    position: relative;
+}
+
+.offer__option--removalRight {
+    display: flex;
+    position: absolute;
+    animation: removalRight 2s;
+    animation-fill-mode: forwards;
+}
+
+.offer__option--removalLeft {
+    display: flex;
+    position: absolute;
+    animation: removalLeft 2s;
+    animation-fill-mode: forwards;
+}
+
+.offer__option--showInRight {
+    display: flex;
+    position: absolute;
+    animation: showInRight 3s;
+    animation-fill-mode: forwards;
+}
+
+.offer__option--showInLeft {
+    display: flex;
+    position: absolute;
+    animation: showInLeft 3s;
+    animation-fill-mode: forwards;
 }
 
 .offer__title {
@@ -1447,6 +1584,21 @@
     font-size: 13px;
     width: 70%;
     margin-top: 20px;
+}
+
+.offer_verticalLine {
+    position: absolute;
+    border-left: 1px solid #222;
+    height: 70%;
+    opacity: .1;
+}
+
+.offer_verticalLine--left {
+    right: 8%;
+}
+
+.offer_verticalLine--right {
+    left: 8%;
 }
 
 .offer__option--active {
@@ -1494,6 +1646,15 @@
 }
 
 
+@media (orientation: portrait) and (max-height: 600px) {
+    .planDescription {
+        display: none;
+    }
+
+    .offer {
+        height: 100vh;
+    }
+}
 
 
 
@@ -1510,13 +1671,16 @@
 
 
     .offer {
-        width: 65vw;
+        width: 100vw;
         height: 100vh;
     }
 
+    .offer__option {
+        width: 70%;
+    }
 
     .offer__title {
-        font-size: 35px;
+        font-size: 27px;
     }
 
     .offer__price {
@@ -1528,15 +1692,30 @@
     }
 
     .offer__logoElement {
-        width: 65%;
+        width: 50%;
     }
 
     .offer__description {
         font-size: 13px;
+        width: 90%;
     }
 
     .offer__option--active {
         display: flex;
+    }
+
+    .offer__navigation {
+        top: 30%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+    }
+
+    .offer_verticalLine--left {
+        right: -3%;
+    }
+
+    .offer_verticalLine--right {
+        left: -3%;
     }
 
 
