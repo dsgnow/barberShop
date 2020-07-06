@@ -115,3 +115,38 @@ $('.navBurger__btn').on('click', function (e) {
     $hambPop.toggleClass('navBurger__hide');
     $hambPop.show();
 })
+
+// PLAN SCROLL SLIDE ON CLICK //
+
+const rightSlide = document.querySelector('.offer__navigation--right');
+const leftSlide = document.querySelector('.offer__navigation--left');
+
+const offers = [...document.querySelectorAll('.offer__option')];
+
+const slideIt = function () {
+    let planIndex = '';
+    offers.forEach(function (offer, index) {
+        if (offer.classList.contains('offer__option--active')) {
+            planIndex = index;
+        }
+
+    });
+
+    if (planIndex !== offers.length - 1) {
+        offers[planIndex].classList.remove('offer__option--active');
+        offers[planIndex + 1].classList.add('offer__option--active');
+        planIndex++;
+    }
+
+    if (planIndex == 0) {
+        leftSlide.classList.remove('offer__navigation--active');
+    } else if ((planIndex > 0) && (planIndex !== offers.length)) {
+        leftSlide.classList.add('offer__navigation--active');
+    } else if ((planIndex > 0) && (planIndex == offers.length)) {
+        rightSlide.classList.remove('offer__navigation--active');
+    }
+
+
+}
+
+rightSlide.addEventListener('click', slideIt);
