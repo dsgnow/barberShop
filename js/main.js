@@ -137,6 +137,7 @@ $('nav a').on('click', function (e) {
 })
 
 $('.navBurger a').on('click', function () {
+    hambActiveFlag = !hambActiveFlag;
     $hambButton.toggleClass('navBurger__btn--active');
     $hambButton.toggleClass('navBurger__btn--notActive');
     $hambPop.toggleClass('navBurger__show');
