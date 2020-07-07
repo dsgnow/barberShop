@@ -37,6 +37,7 @@ const $hambButton = $('.navBurger__btn');
 const $hambSpan = $('.navBurger__span');
 
 const $navLinks = $('.nav__link');
+let hambActiveFlag = false;
 
 
 // appear elements when scroll //
@@ -50,11 +51,11 @@ $(document).on('scroll', function () {
     if ((scrollValue < windowHeight)) {
         clearLinksBorder();
         linkStart.classList.add('nav__link--selected');
-        if (orientation.type == 'landscape-primary') {
+        if (orientation.type == 'landscape-primary' && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
             $navLinks.removeClass('nav__link--black');
-        } else if (orientation.type == 'portrait-primary') {
+        } else if (orientation.type == 'portrait-primary' && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--black');
             $hambSpan.removeClass('navBurger__span--white');
         }
@@ -62,11 +63,11 @@ $(document).on('scroll', function () {
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 2)) {
         clearLinksBorder();
         linkAbout.classList.add('nav__link--selected');
-        if (orientation.type == 'landscape-primary') {
+        if (orientation.type == 'landscape-primary' && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
             $navLinks.removeClass('nav__link--black');
-        } else if (orientation.type == 'portrait-primary') {
+        } else if (orientation.type == 'portrait-primary' && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
         }
@@ -74,11 +75,11 @@ $(document).on('scroll', function () {
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 3)) {
         clearLinksBorder();
         linkPlan.classList.add('nav__link--selected');
-        if (orientation.type == 'landscape-primary') {
+        if (orientation.type == 'landscape-primary' && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--black');
             $hambSpan.removeClass('navBurger__span--white');
             $navLinks.addClass('nav__link--black');
-        } else if (orientation.type == 'portrait-primary') {
+        } else if (orientation.type == 'portrait-primary' && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--black');
             $hambSpan.removeClass('navBurger__span--white');
         }
@@ -86,10 +87,10 @@ $(document).on('scroll', function () {
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 4)) {
         clearLinksBorder();
         linkContact.classList.add('nav__link--selected');
-        if (orientation == 'landscape-primary') {
+        if (orientation == 'landscape-primary' && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
-        } else if (orientation.type == 'portrait-primary') {
+        } else if (orientation.type == 'portrait-primary' && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
         }
@@ -134,6 +135,7 @@ $('.navBurger a').on('click', function () {
 })
 
 $('.navBurger__btn').on('click', function (e) {
+    hambActiveFlag = !hambActiveFlag;
     e.preventDefault();
     $hambButton.toggleClass('navBurger__btn--active');
     $hambButton.toggleClass('navBurger__btn--notActive');
@@ -191,7 +193,6 @@ const slideIt = function (side) {
         }
     }
 
-    console.log(offers.length);
     if (planIndex == 0) {
         leftSlide.classList.remove('offer__navigation--active');
         rightSlide.classList.add('offer__navigation--active');
