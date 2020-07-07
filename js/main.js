@@ -222,3 +222,29 @@ const right = "right";
 const left = "left";
 rightSlide.addEventListener('click', slideIt);
 leftSlide.addEventListener('click', slideIt);
+
+
+//button redirections//
+
+const btnMeetUs = $('.columnTexts_button--meetUs');
+const btnPlans = $('.columnTexts_button--offer');
+
+const btnReservation = $('.offer_button');
+
+btnMeetUs.on('click', function () {
+    const goToSection = "[data-sectionin=nav__link--about]";
+    $('body, html').animate({
+        scrollTop: $(goToSection).offset().top
+    }, 500)
+})
+
+btnPlans.on('click', function () {
+    const goToSection = "[data-sectionin=nav__link--plan]";
+    $('body, html').animate({
+        scrollTop: $(goToSection).offset().top
+    }, 500)
+})
+
+btnReservation.on('click', function () {
+    window.open('https://www.moment.pl/koszyk/kuznia-dzentelmenow-barber-shop/konfiguracja', '_blank');
+})
