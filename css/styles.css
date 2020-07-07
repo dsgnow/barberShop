@@ -1493,7 +1493,7 @@ body {
 
 .planDescription {
     width: 100vw;
-    height: 35vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1518,7 +1518,7 @@ body {
 
 .offer {
     width: 100vw;
-    height: 65vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1651,7 +1651,7 @@ body {
 }
 
 
-@media (orientation: portrait) and (max-height: 550px) {
+@media (orientation: portrait) and (max-height: 568px) {
     .planDescription {
         display: none;
     }
@@ -1938,7 +1938,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        width: 50%;
+        width: 30%;
     }
 
     .offer__title {
@@ -1958,7 +1958,7 @@ body {
     }
 
     .offer__description {
-        font-size: 20px;
+        font-size: 17px;
         width: 70%;
     }
 
