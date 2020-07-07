@@ -230,6 +230,18 @@ body {
     }
 }
 
+@keyframes contactTextFadeIn {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
 
 .wrapStart {
     display: flex;
@@ -997,7 +1009,7 @@ body {
     }
 
     .columnTexts_button {
-        margin-top: 70px;
+        margin-top: 30px;
         margin-bottom: 0;
         width: 165px;
         height: 55px;
@@ -1928,7 +1940,7 @@ body {
     .offer {
         display: flex;
         flex-direction: row;
-        align-items: unset;
+        align-items: flex-start;
         width: 90vw;
         height: 60vh;
         margin-bottom: 100px;
@@ -1982,5 +1994,204 @@ body {
 @media (orientation: landscape) and (max-height: 600px) {
     .planDescription {
         display: none;
+    }
+}
+
+
+/*  CONTACT SECTION */
+
+.map {
+    position: absolute;
+    bottom: 0;
+    height: 45vh;
+    width: 100vw;
+    opacity: .8;
+    z-index: 999;
+}
+
+.wrapContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-basis: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    background-color: #0b0b0d;
+}
+
+.columnMapContact {
+    width: 100vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.columnTextsContact__imgSaloon {
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: -60%;
+    right: 0;
+    bottom: 0;
+    height: 150%;
+    opacity: .2;
+}
+
+.columnTextsContact {
+    width: 100vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    z-index: 999;
+    opacity: .8;
+}
+
+.columnTextsContact--active {
+    animation: contactTextFadeIn 2s;
+    animation-fill-mode: forwards;
+}
+
+.columnTextsContact__logo {
+    opacity: 0;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.columnTextsContact__hl {
+    opacity: 0;
+    width: 90%;
+    color: white;
+    opacity: .2;
+    margin-bottom: 20px;
+}
+
+.columnTextsContact__addressStreet,
+.columnTextsContact__addressTown,
+.columnTextsContact__addressTel {
+    margin: 3px;
+    opacity: 0;
+}
+
+.columnTextsContact__icons {
+    margin: 10px;
+    opacity: 0;
+}
+
+.columnTextsContact_icon {
+    margin: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.columnTextsContact_icon:hover {
+    transform: scale(1.1);
+}
+
+.columnTextsContact__bold {
+    font-weight: 700;
+}
+
+@media (orientation:portrait) and (min-width:768px) {
+    .columnTextsContact {
+        font-size: 30px;
+
+    }
+}
+
+@media (orientation:portrait) and (min-width:1024px) {
+    .columnTextsContact {
+        font-size: 40px;
+
+    }
+
+    .columnTextsContact__logo {
+        margin-bottom: 40px;
+    }
+
+    .columnTextsContact__hl {
+        opacity: .4;
+        margin-bottom: 40px;
+    }
+
+    .columnTextsContact__addressStreet,
+    .columnTextsContact__addressTown,
+    .columnTextsContact__addressTel {
+        margin: 8px;
+    }
+
+    .columnTextsContact__icons {
+        margin: 15px;
+    }
+
+    .columnTextsContact_icon {
+        margin: 15px;
+    }
+}
+
+@media (orientation:landscape) {
+    .map {
+        position: absolute;
+        bottom: 0;
+        height: 100vh;
+        width: 45vw;
+        opacity: .7;
+    }
+
+    .wrapContact {
+        flex-direction: row;
+    }
+
+    .columnMapContact {
+        width: 45vw;
+        height: 100vh;
+    }
+
+    .columnTextsContact {
+        width: 55vw;
+        height: 100vh;
+    }
+
+}
+
+@media (orientation:landscape) and (min-width:1024px) {
+    .columnTextsContact {
+        font-size: 30px;
+    }
+
+    .columnTextsContact__logo {
+        margin-bottom: 40px;
+    }
+
+    .columnTextsContact__hl {
+        opacity: .4;
+        margin-bottom: 40px;
+    }
+}
+
+@media (orientation:landscape) and (min-width:1366px) {
+    .columnTextsContact__imgSaloon {
+        display: block;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 130%;
+        opacity: .2;
     }
 }

@@ -31,6 +31,12 @@ const $aboutLogoElement = $('.columnTextsAbout__imgLogo')
 const $aboutImageDawid = $('.columnImagesAbout__imgDawid')
 const fadeIntexts = document.querySelectorAll('.columnImagesAbout__text');
 
+// contact section //
+const $columnTextsContact = $('.columnTextsContact');
+const columnTextsContactFromTop = $columnTextsContact.offset().top;
+const columnTextsContactHeight = $columnTextsContact.outerHeight();
+const allContactTexts = [...document.querySelectorAll('.columnTextsContact>*')];
+
 // hamburger //
 const $hambPop = $('.navBurger');
 const $hambButton = $('.navBurger__btn');
@@ -85,8 +91,10 @@ $(document).on('scroll', function () {
         }
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 4)) {
+        console.log('dzialam');
         clearLinksBorder();
         linkContact.classList.add('nav__link--selected');
+        $navLinks.removeClass('nav__link--black');
         if (orientation == 'landscape-primary' && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
@@ -106,6 +114,13 @@ $(document).on('scroll', function () {
 
         fadeIntexts.forEach(function (fadeInText, index) {
             fadeInText.classList.add("columnImagesAbout__text--fadeIn");
+        });
+    }
+
+
+    if (scrollValue > columnTextsContactHeight + columnTextsContactFromTop - windowHeight - 500) {
+        allContactTexts.forEach(function (allContactText, index) {
+            allContactText.classList.add("columnImagesAbout__text--fadeIn");
         });
     }
 
