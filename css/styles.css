@@ -2042,10 +2042,10 @@ body {
     position: absolute;
     margin: auto;
     top: 0;
-    left: -60%;
     right: 0;
+    left: 0;
     bottom: 0;
-    height: 150%;
+    height: 130%;
     opacity: .2;
 }
 
