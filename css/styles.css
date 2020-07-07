@@ -638,10 +638,9 @@ body {
 }
 
 .columnTexts_button {
-    border: 2px solid #222;
     border-radius: 10px;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     width: 100px;
     height: 33px;
     font-size: 11px;
@@ -674,8 +673,9 @@ body {
 }
 
 .columnTexts_button:hover {
-    color: white;
-    background-color: #222;
+    color: black;
+    background-color: white;
+    border: 2px solid #222;
 }
 
 .columnTexts_button--white:hover {
@@ -1888,6 +1888,26 @@ body {
 
 @media (orientation: landscape) and (min-width: 1366px) {
 
+    .offer__option--removalRight {
+        animation: none;
+        position: static;
+    }
+
+    .offer__option--removalLeft {
+        animation: none;
+        position: static;
+    }
+
+    .offer__option--showInRight {
+        animation: none;
+        position: static;
+    }
+
+    .offer__option--showInLeft {
+        animation: none;
+        position: static;
+    }
+
     .planDescription {
         width: 100vw;
         height: 40vh;
@@ -1906,13 +1926,19 @@ body {
     }
 
     .offer {
-        width: 40vw;
+        display: flex;
+        flex-direction: row;
+        align-items: unset;
+        width: 90vw;
         height: 60vh;
         margin-bottom: 100px;
     }
 
     .offer__option {
-        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 50%;
     }
 
     .offer__title {
@@ -1937,34 +1963,19 @@ body {
     }
 
     .offer__navigation {
-        top: 40%;
-        transform: translate(-50%, -50%);
-        width: 300px;
-        height: 500px;
-        line-height: 500px;
-        font-size: 50px;
-    }
-
-    .offer__navigation:hover {
-        color: black
-    }
-
-    .offer__navigation--right {
-        right: 15%;
+        display: none;
     }
 
 
-    .offer__navigation--left {
-        left: 15%;
+
+    .offer__option--quick>.offer_verticalLine--right {
+        display: none;
     }
 
-    .offer_verticalLine--left {
-        right: 0%;
+    .offer__option--gentle>.offer_verticalLine--left {
+        display: none;
     }
 
-    .offer_verticalLine--right {
-        left: 0%;
-    }
 
 }
 
