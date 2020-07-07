@@ -230,6 +230,8 @@ const btnMeetUs = $('.columnTexts_button--meetUs');
 const btnPlans = $('.columnTexts_button--offer');
 
 const btnReservation = $('.offer_button');
+const btnFacebook = $('.fa-facebook');
+const btnInsta = $('.fa-instagram');
 
 btnMeetUs.on('click', function () {
     const goToSection = "[data-sectionin=nav__link--about]";
@@ -246,5 +248,13 @@ btnPlans.on('click', function () {
 })
 
 btnReservation.on('click', function () {
-    window.open('https://www.moment.pl/koszyk/kuznia-dzentelmenow-barber-shop/konfiguracja', '_blank');
+    window.open('https://www.moment.pl/kuznia-dzentelmenow-barber-shop', '_blank');
+})
+
+btnFacebook.on('click', function () {
+    window.open('https://www.facebook.com/KUZNIADZENTELMENOW/', '_blank');
+})
+
+btnInsta.on('click', function () {
+    window.open('https://www.instagram.com/kuznia_dzentelmenow/?igshid=1erm1rgcgohtt&fbclid=IwAR3SSynwriXx75SGl2Tt1WRjsjQ6IJuUhJKzWo0k6fcw-O7aTkd538FBDSE', '_blank');
 })
