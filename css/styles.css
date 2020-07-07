@@ -1664,7 +1664,7 @@ body {
 
 
 @media (orientation: portrait) and (max-height: 568px) {
-    .planDescription {
+    .planDescription__logo {
         display: none;
     }
 
