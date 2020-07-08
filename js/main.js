@@ -48,10 +48,10 @@ let hambActiveFlag = false;
 
 // appear elements when scroll //
 $(window).on('scroll', function () {
-
-    alert('iphone test');
-    const windowHeight = $(window).height();
-    const scrollValue = $(window).scrollTop();
+    const body = $("body");
+    const html = $("html");
+    const windowHeight = $(body, html, document, window).height();
+    const scrollValue = $(body, html, document, window).scrollTop();
     let orientation = window.screen.orientation;
 
     // change link border on scroll //
