@@ -67,6 +67,7 @@ $(window).on('scroll', function () {
 
     // change link border on scroll //
     if ((scrollValue < windowHeight)) {
+        console.log('Scroll value: ' + scrollValue + ' windowHeight: ' + windowHeight)
         clearLinksBorder();
         linkStart.classList.add('nav__link--selected');
         if (orientation.type == 'landscape-primary' && !hambActiveFlag) {
