@@ -272,6 +272,7 @@ body {
     z-index: 9999;
     width: 35%;
     transition: .3s ease-in-out;
+    background-color: #222;
 }
 
 .nav__list {
@@ -612,6 +613,11 @@ body {
 .columnTexts__imgLogo {
     width: 50%;
     margin: 20px 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .columnTexts__blockTypography {
@@ -919,7 +925,6 @@ body {
 
     .nav {
         display: block;
-        margin-right: 30px;
     }
 
     .navBurger__box {
@@ -1068,6 +1073,7 @@ body {
     font-family: 'Cinzel', serif;
     font-weight: 400;
     color: white;
+    z-index: 9;
 }
 
 .columnImagesAbout__imgDawid {
@@ -1324,7 +1330,7 @@ body {
     }
 
     .columnTextsAbout {
-        width: 50vw;
+        width: 51vw;
         height: 100vh;
     }
 
@@ -2149,8 +2155,12 @@ body {
     }
 
     .columnTextsContact__imgSaloon {
-        height: 100vh;
-        right: -10%;
+        min-height: 100%;
+        min-width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 
 

@@ -55,8 +55,6 @@ if (mql) {
 $(window).on('scroll', function () {
 
     var isSafari = window.safari !== undefined;
-    if (isSafari) console.log("Safari, yeah!");
-
     let bodyelem = '';
 
     if (isSafari) {
@@ -74,7 +72,6 @@ $(window).on('scroll', function () {
         clearLinksBorder();
         linkStart.classList.add('nav__link--selected');
         if (mql.matches && !hambActiveFlag) {
-            console.log('1 str');
             $hambSpan.removeClass('navBurger__span--white');
             $hambSpan.addClass('navBurger__span--black');
             $navLinks.removeClass('nav__link--black');
@@ -84,7 +81,6 @@ $(window).on('scroll', function () {
         }
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 2)) {
-        console.log('2 str');
         clearLinksBorder();
         linkAbout.classList.add('nav__link--selected');
         if (mql.matches && !hambActiveFlag) {
@@ -95,7 +91,7 @@ $(window).on('scroll', function () {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
             $navLinks.addClass('nav__link--white');
-            $navLinks.removeClass('nav__link--black');
+            // $navLinks.removeClass('nav__link--black');
         }
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 3)) {
@@ -104,12 +100,12 @@ $(window).on('scroll', function () {
         if (mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--black');
             $hambSpan.removeClass('navBurger__span--white');
-            $navLinks.addClass('nav__link--black');
+            // $navLinks.addClass('nav__link--black');
         } else if (!mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--black');
             $hambSpan.removeClass('navBurger__span--white');
-            $navLinks.addClass('nav__link--black');
-            $navLinks.removeClass('nav__link--white');
+            // $navLinks.addClass('nav__link--black');
+            // $navLinks.removeClass('nav__link--white');
         }
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 4)) {
@@ -122,8 +118,8 @@ $(window).on('scroll', function () {
         } else if (!mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
-            $navLinks.addClass('nav__link--white');
-            $navLinks.removeClass('nav__link--black');
+            // $navLinks.addClass('nav__link--white');
+            // $navLinks.removeClass('nav__link--black');
         }
     }
 
