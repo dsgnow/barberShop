@@ -60,21 +60,19 @@ $(window).on('scroll', function () {
         bodyelem = $("html,body")
     }
 
-
+    let mql = window.matchMedia("(orientation: portrait)");
     const windowHeight = $(bodyelem).height();
     const scrollValue = $(bodyelem).scrollTop();
-    let orientation = window.screen.orientation;
 
     // change link border on scroll //
     if ((scrollValue < windowHeight)) {
-        console.log('Scroll value: ' + scrollValue + ' windowHeight: ' + windowHeight)
         clearLinksBorder();
         linkStart.classList.add('nav__link--selected');
-        if (orientation.type == 'landscape-primary' && !hambActiveFlag) {
+        if (mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
             $navLinks.removeClass('nav__link--black');
-        } else if (orientation.type == 'portrait-primary' && !hambActiveFlag) {
+        } else if (!mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--black');
             $hambSpan.removeClass('navBurger__span--white');
         }
@@ -82,11 +80,11 @@ $(window).on('scroll', function () {
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 2)) {
         clearLinksBorder();
         linkAbout.classList.add('nav__link--selected');
-        if (orientation.type == 'landscape-primary' && !hambActiveFlag) {
+        if (mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
             $navLinks.removeClass('nav__link--black');
-        } else if (orientation.type == 'portrait-primary' && !hambActiveFlag) {
+        } else if (!mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
         }
@@ -94,11 +92,11 @@ $(window).on('scroll', function () {
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 3)) {
         clearLinksBorder();
         linkPlan.classList.add('nav__link--selected');
-        if (orientation.type == 'landscape-primary' && !hambActiveFlag) {
+        if (mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--black');
             $hambSpan.removeClass('navBurger__span--white');
             $navLinks.addClass('nav__link--black');
-        } else if (orientation.type == 'portrait-primary' && !hambActiveFlag) {
+        } else if (!mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--black');
             $hambSpan.removeClass('navBurger__span--white');
         }
@@ -107,10 +105,10 @@ $(window).on('scroll', function () {
         clearLinksBorder();
         linkContact.classList.add('nav__link--selected');
         $navLinks.removeClass('nav__link--black');
-        if (orientation.type == 'landscape-primary' && !hambActiveFlag) {
+        if (mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
-        } else if (orientation.type == 'portrait-primary' && !hambActiveFlag) {
+        } else if (!mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
         }

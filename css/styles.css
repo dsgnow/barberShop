@@ -597,6 +597,7 @@ body {
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
     font-family: 'Cinzel', serif;
     font-weight: 400;
 }
@@ -611,6 +612,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .columnTexts_wrapTittle {
