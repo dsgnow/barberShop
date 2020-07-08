@@ -615,7 +615,7 @@ body {
     margin: 20px 0 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-self: center;
 }
 
 .columnTexts__blockTypography {
@@ -2170,28 +2170,26 @@ body {
 }
 
 @media (orientation:landscape) and (min-width:1024px) {
-    .columnTextsContact {
-        font-size: 23px;
-    }
-}
-
-@media (orientation:landscape) and (min-width:1366px) {
-
     .wrapContact {
-        height: 30vh;
+        height: 60vh;
     }
 
     .columnTextsContact {
-        height: 60%;
+        height: 60vh;
+        font-size: 23px;
     }
 
     .mapTexts {
-        height: 40%;
+        height: 30%;
     }
 
     .columnTextsContact {
         font-size: 25px;
     }
+
+}
+
+@media (orientation:landscape) and (min-width:1366px) {
 
     .columnTextsContact__logo {
         width: 35%;
