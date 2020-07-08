@@ -1552,14 +1552,16 @@ body {
 }
 
 .offer__option {
-    display: none;
     position: absolute;
+    display: none;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    align-self: center;
     text-align: justify;
     width: 90%;
     position: relative;
+    background-color: white;
 }
 
 .offer__option--removalRight {
