@@ -1551,6 +1551,7 @@ body {
     align-items: center;
     align-self: center;
     position: relative;
+    width: 90%;
 }
 
 .offer__option {
@@ -1560,7 +1561,7 @@ body {
     align-items: center;
     align-self: center;
     text-align: justify;
-    width: 90%;
+    width: 100%;
     background-color: white;
     position: relative;
 }
@@ -1568,28 +1569,48 @@ body {
 
 .offer__option--removalRight {
     display: flex;
+    display: -webkit-flex;
     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     animation: removalRight 2s;
     animation-fill-mode: forwards;
 }
 
 .offer__option--removalLeft {
     display: flex;
+    display: -webkit-flex;
     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     animation: removalLeft 2s;
     animation-fill-mode: forwards;
 }
 
 .offer__option--showInRight {
     display: flex;
+    display: -webkit-flex;
     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     animation: showInRight 3s;
     animation-fill-mode: forwards;
 }
 
 .offer__option--showInLeft {
     display: flex;
+    display: -webkit-flex;
     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     animation: showInLeft 3s;
     animation-fill-mode: forwards;
 }
@@ -1623,6 +1644,8 @@ body {
 
 .offer_verticalLine {
     position: absolute;
+    top: 0;
+    bottom: 0;
     border-left: 1px solid #222;
     height: 70%;
     opacity: .1;
@@ -1788,12 +1811,12 @@ body {
 
 
     .offer {
-        width: 100vw;
+        width: 70vw;
         height: 100vh;
     }
 
     .offer__option {
-        width: 70%;
+        width: 100%;
     }
 
     .offer__title {
@@ -1862,12 +1885,12 @@ body {
     }
 
     .offer {
-        width: 80vw;
+        width: 70vw;
         height: 50vh;
     }
 
     .offer__option {
-        width: 70%;
+        width: 100%;
     }
 
     .offer__title {
