@@ -49,6 +49,7 @@ let hambActiveFlag = false;
 // appear elements when scroll //
 $(window).on('scroll', function () {
 
+    alert('iphone test');
     const windowHeight = $(window).height();
     const scrollValue = $(window).scrollTop();
     let orientation = window.screen.orientation;
