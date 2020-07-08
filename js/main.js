@@ -47,7 +47,7 @@ let hambActiveFlag = false;
 
 
 // appear elements when scroll //
-$(document).on('scroll', function () {
+$(window).on('scroll', function () {
 
     const windowHeight = $(window).height();
     const scrollValue = $(window).scrollTop();
@@ -91,11 +91,10 @@ $(document).on('scroll', function () {
         }
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 4)) {
-        console.log('dzialam');
         clearLinksBorder();
         linkContact.classList.add('nav__link--selected');
         $navLinks.removeClass('nav__link--black');
-        if (orientation == 'landscape-primary' && !hambActiveFlag) {
+        if (orientation.type == 'landscape-primary' && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
         } else if (orientation.type == 'portrait-primary' && !hambActiveFlag) {
