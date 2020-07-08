@@ -2284,3 +2284,24 @@ footer p {
         min-height: 800px;
     }
 }
+
+@media (orientation: portrait) {
+
+    .wrapStart,
+    .wrapAbout,
+    .columnTextsAbout {
+        min-height: 350px;
+    }
+
+    .wrapContact,
+    .columnContact,
+    .columnTextsContact,
+    .columnTexts {
+        min-height: 150px;
+    }
+
+
+    .offer__option {
+        min-height: 400px;
+    }
+}
