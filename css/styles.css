@@ -1553,14 +1553,12 @@ body {
 }
 
 .offer__option {
-    position: absolute;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-self: center;
     text-align: justify;
-    margin: auto auto;
     width: 90%;
     background-color: white;
 }
@@ -1952,20 +1950,31 @@ body {
         width: 50%;
     }
 
+    .planDescription {
+        height: 30vh;
+    }
+
     .offer {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
         width: 90vw;
-        height: 60vh;
-        margin-bottom: 100px;
+        height: 70vh;
+        margin: unset;
+        padding: unset;
     }
 
     .offer__option {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-start;
         width: 30%;
+        margin: unset;
+        padding: unset;
     }
 
     .offer__title {
