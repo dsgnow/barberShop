@@ -44,6 +44,11 @@ const $hambSpan = $('.navBurger__span');
 
 const $navLinks = $('.nav__link');
 let hambActiveFlag = false;
+let mql = window.matchMedia("(orientation: portrait)");
+if (mql) {
+    $hambSpan.removeClass('navBurger__span--black');
+    $hambSpan.addClass('navBurger__span--white');
+}
 
 
 // appear elements when scroll //
@@ -60,7 +65,7 @@ $(window).on('scroll', function () {
         bodyelem = window;
     }
 
-    let mql = window.matchMedia("(orientation: portrait)");
+
     const windowHeight = $(bodyelem).height();
     const scrollValue = $(bodyelem).scrollTop();
 
@@ -69,12 +74,13 @@ $(window).on('scroll', function () {
         clearLinksBorder();
         linkStart.classList.add('nav__link--selected');
         if (mql.matches && !hambActiveFlag) {
-            $hambSpan.addClass('navBurger__span--white');
-            $hambSpan.removeClass('navBurger__span--black');
+            console.log('1 str');
+            $hambSpan.removeClass('navBurger__span--white');
+            $hambSpan.addClass('navBurger__span--black');
             $navLinks.removeClass('nav__link--black');
         } else if (!mql.matches && !hambActiveFlag) {
-            $hambSpan.addClass('navBurger__span--black');
-            $hambSpan.removeClass('navBurger__span--white');
+            $hambSpan.removeClass('navBurger__span--black');
+            $hambSpan.addClass('navBurger__span--white');
         }
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 2)) {
@@ -240,6 +246,27 @@ const right = "right";
 const left = "left";
 rightSlide.addEventListener('click', slideIt);
 leftSlide.addEventListener('click', slideIt);
+
+// change nav visiblity when scroll //
+const $hamburger = $('.navBurger__box');
+const $nav = $('.nav');
+
+var lastScrollTop = 0;
+$(window).scroll(function (event) {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) {
+        if (hambActiveFlag === false) {
+            $hamburger.addClass('opacityNone');
+        }
+        $nav.addClass('opacityNone');
+    } else {
+        if (hambActiveFlag === false) {
+            $hamburger.removeClass('opacityNone');
+        }
+        $nav.removeClass('opacityNone');
+    }
+    lastScrollTop = st;
+});
 
 
 //button redirections//

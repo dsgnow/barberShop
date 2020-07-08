@@ -258,6 +258,11 @@ body {
 
 }
 
+.opacityNone {
+    transform: translate(0, -100%);
+    opacity: 0;
+}
+
 .nav {
     display: none;
     position: fixed;
@@ -266,6 +271,7 @@ body {
     width: 10vw;
     z-index: 9999;
     width: 35%;
+    transition: .3s ease-in-out;
 }
 
 .nav__list {
@@ -406,6 +412,7 @@ body {
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
+    transition: .3s ease-in-out;
 }
 
 .navBurger__span {
