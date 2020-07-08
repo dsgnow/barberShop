@@ -48,10 +48,23 @@ let hambActiveFlag = false;
 
 // appear elements when scroll //
 $(window).on('scroll', function () {
-    const body = $("body");
-    const html = $("html");
-    const windowHeight = $(body, html, document, window).height();
-    const scrollValue = $(body, html, document, window).scrollTop();
+
+    const isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+        navigator.userAgent &&
+        navigator.userAgent.indexOf('CriOS') == -1 &&
+        navigator.userAgent.indexOf('FxiOS') == -1;
+
+    let bodyelem = '';
+
+    if (isSafari) {
+        bodyelem = $("body")
+    } else {
+        bodyelem = $("html,body")
+    }
+
+
+    const windowHeight = $(bodyelem).height();
+    const scrollValue = $(bodyelem).scrollTop();
     let orientation = window.screen.orientation;
 
     // change link border on scroll //
