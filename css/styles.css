@@ -2159,7 +2159,16 @@ body {
 
 @media (orientation:landscape) and (min-width:1366px) {
     .columnTextsContact {
-        font-size: 35px;
+        font-size: 25px;
+    }
+
+    .columnTextsContact__logo {
+        width: 35%;
+        margin-bottom: 30px;
+    }
+
+    .columnTextsContact__hl {
+        margin-bottom: 30px;
     }
 }
 
