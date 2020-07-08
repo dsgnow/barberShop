@@ -1561,6 +1561,7 @@ body {
     text-align: justify;
     width: 90%;
     background-color: white;
+    position: relative;
 }
 
 .offer__option--removalRight {
