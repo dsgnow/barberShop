@@ -49,10 +49,8 @@ let hambActiveFlag = false;
 // appear elements when scroll //
 $(window).on('scroll', function () {
 
-    const isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
-        navigator.userAgent &&
-        navigator.userAgent.indexOf('CriOS') == -1 &&
-        navigator.userAgent.indexOf('FxiOS') == -1;
+    var isSafari = window.safari !== undefined;
+    if (isSafari) console.log("Safari, yeah!");
 
     let bodyelem = '';
 
