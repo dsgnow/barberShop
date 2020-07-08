@@ -1560,7 +1560,6 @@ body {
     align-self: center;
     text-align: justify;
     width: 90%;
-    position: relative;
     background-color: white;
 }
 
@@ -1642,7 +1641,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 .offer__navigation {
@@ -1650,8 +1653,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 50%;
-    transform: translate(-50%, -50%);
     font-size: 30px;
     color: #c2c2c2;
     opacity: 0;
@@ -1819,8 +1820,6 @@ body {
     }
 
     .offer__navigation {
-        top: 30%;
-        transform: translate(-50%, -50%);
         width: 100px;
     }
 
@@ -1886,8 +1885,6 @@ body {
     }
 
     .offer__navigation {
-        top: 40%;
-        transform: translate(-50%, -50%);
         width: 200px;
         height: 300px;
         line-height: 300px;
