@@ -2176,6 +2176,19 @@ body {
 }
 
 @media (orientation:landscape) and (min-width:1366px) {
+
+    .wrapContact {
+        height: 30vh;
+    }
+
+    .columnTextsContact {
+        height: 60%;
+    }
+
+    .mapTexts {
+        height: 40%;
+    }
+
     .columnTextsContact {
         font-size: 25px;
     }
