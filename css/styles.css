@@ -1550,6 +1550,7 @@ body {
     justify-content: center;
     align-items: center;
     align-self: center;
+    position: relative;
 }
 
 .offer__option {
@@ -1563,6 +1564,7 @@ body {
     background-color: white;
     position: relative;
 }
+
 
 .offer__option--removalRight {
     display: flex;
@@ -1639,10 +1641,7 @@ body {
 }
 
 .offer__navigations {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100vw;
@@ -1666,12 +1665,14 @@ body {
 .offer__navigation--right {
     right: 0%;
     animation: sliderGrow 3s infinite;
+    z-index: 999;
 }
 
 
 .offer__navigation--left {
     left: 0%;
     animation: sliderGrow 3s infinite;
+    z-index: 999;
 }
 
 .offer__navigation--active {
