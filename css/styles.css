@@ -651,7 +651,7 @@ body {
 .columnTexts__descriptionText {
     font-size: 14px;
     width: 80%;
-    text-align: center;
+    text-align: justify;
     align-self: center;
 }
 
@@ -792,7 +792,7 @@ body {
     .columnTexts__descriptionText {
         font-size: 18px;
         width: 70%;
-        text-align: center;
+        text-align: justify;
     }
 
     .columnTexts_button {
@@ -878,7 +878,7 @@ body {
     .columnTexts__descriptionText {
         font-size: 14px;
         width: 80%;
-        text-align: center;
+        text-align: justify;
 
 
     }
@@ -906,7 +906,7 @@ body {
 
     .columnTexts__descriptionText {
         font-size: 14px;
-        text-align: center;
+        text-align: justify;
         line-height: 15px;
     }
 
@@ -1191,7 +1191,7 @@ body {
 
 .columnTextsAbout__descriptionText {
     font-size: 12px;
-    text-align: center;
+    text-align: justify;
     transform: translateY(-600%);
 }
 
