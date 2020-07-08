@@ -55,9 +55,9 @@ $(window).on('scroll', function () {
     let bodyelem = '';
 
     if (isSafari) {
-        bodyelem = $("body")
+        bodyelem = $("body");
     } else {
-        bodyelem = $("html,body")
+        bodyelem = window;
     }
 
     let mql = window.matchMedia("(orientation: portrait)");
@@ -78,6 +78,7 @@ $(window).on('scroll', function () {
         }
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 2)) {
+        console.log('2 str');
         clearLinksBorder();
         linkAbout.classList.add('nav__link--selected');
         if (mql.matches && !hambActiveFlag) {
@@ -87,6 +88,8 @@ $(window).on('scroll', function () {
         } else if (!mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
+            $navLinks.addClass('nav__link--white');
+            $navLinks.removeClass('nav__link--black');
         }
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 3)) {
@@ -99,6 +102,8 @@ $(window).on('scroll', function () {
         } else if (!mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--black');
             $hambSpan.removeClass('navBurger__span--white');
+            $navLinks.addClass('nav__link--black');
+            $navLinks.removeClass('nav__link--white');
         }
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 4)) {
@@ -111,6 +116,8 @@ $(window).on('scroll', function () {
         } else if (!mql.matches && !hambActiveFlag) {
             $hambSpan.addClass('navBurger__span--white');
             $hambSpan.removeClass('navBurger__span--black');
+            $navLinks.addClass('nav__link--white');
+            $navLinks.removeClass('nav__link--black');
         }
     }
 

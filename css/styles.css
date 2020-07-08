@@ -594,7 +594,7 @@ body {
     height: 55vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0 auto;
@@ -641,6 +641,7 @@ body {
     font-size: 14px;
     width: 80%;
     text-align: center;
+    align-self: center;
 }
 
 .columnTexts__descriptionText--larger {
@@ -664,6 +665,7 @@ body {
     cursor: pointer;
     margin-bottom: 20px;
     letter-spacing: .5px;
+    align-self: center;
 }
 
 .columnTexts_buttonWrap {
