@@ -602,7 +602,7 @@ body {
     height: 55vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     margin: 0 auto;
@@ -615,9 +615,7 @@ body {
     margin: 20px 0 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 0 auto;
 }
 
 .columnTexts__blockTypography {
@@ -2216,4 +2214,26 @@ footer p {
         font-size: 13px;
     }
 
+}
+
+
+/* wrappers min width and height */
+
+@media (orientation: landscape) and (min-width: 1200px) {
+
+    .wrapStart,
+    .columnImages,
+    .columnTexts,
+    .wrapAbout,
+    .columnImagesAbout,
+    .columnTextsAbout,
+    .wrapPlan {
+        min-height: 800px;
+    }
+
+    .wrapContact,
+    .columnContact,
+    .columnTextsContact {
+        min-height: 800px;
+    }
 }

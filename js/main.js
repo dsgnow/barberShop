@@ -251,14 +251,14 @@ var lastScrollTop = 0;
 $(window).scroll(function (event) {
     var st = $(this).scrollTop();
     if (st > lastScrollTop) {
-        if (hambActiveFlag === false) {
-            $hamburger.addClass('opacityNone');
-        }
+        // if (hambActiveFlag === false) {
+        //     $hamburger.addClass('opacityNone');
+        // }
         $nav.addClass('opacityNone');
     } else {
-        if (hambActiveFlag === false) {
-            $hamburger.removeClass('opacityNone');
-        }
+        // if (hambActiveFlag === false) {
+        //     $hamburger.removeClass('opacityNone');
+        // }
         $nav.removeClass('opacityNone');
     }
     lastScrollTop = st;
