@@ -1644,8 +1644,8 @@ body {
 
 .offer_verticalLine {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     border-left: 1px solid #222;
     height: 70%;
     opacity: .1;
