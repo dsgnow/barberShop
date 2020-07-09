@@ -272,7 +272,7 @@ body {
     z-index: 9999;
     width: 35%;
     transition: .3s ease-in-out;
-    background-color: #222;
+    background-color: #0b0b0d;
 }
 
 .nav__list {
