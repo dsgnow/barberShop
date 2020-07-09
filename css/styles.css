@@ -1545,6 +1545,8 @@ body {
     color: #222;
 }
 
+.thumbnail {}
+
 .offer {
     width: 100vw;
     height: 70vh;
@@ -1970,18 +1972,37 @@ body {
 
     .planDescription__logo {
         width: 10%;
+        content: url("/img/logoWhite.svg");
     }
 
     .planDescription__title {
         font-size: 30px;
+        color: white;
     }
 
     .planDescription__hl {
         width: 50%;
+        color: white;
     }
 
     .planDescription {
         height: 30vh;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .thumbnail {
+        /* display: inline-block; */
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: 90%;
+        position: fixed;
+        z-index: -99;
+        opacity: 1;
+        background-color: #222;
     }
 
     .offer {
@@ -1990,10 +2011,13 @@ body {
         align-items: center;
         justify-content: center;
         align-self: center;
-        width: 90vw;
+        width: 100vw;
         height: 70vh;
         margin: unset;
         padding: unset;
+        margin: 0 auto;
+        background-color: #fff;
+        padding-top: 50px;
     }
 
     .offer__option {
@@ -2034,11 +2058,13 @@ body {
 
 
 
-    .offer__option--quick>.offer_verticalLine--right {
+    .offer__option--quick>.offer_verticalLine--right,
+    .offer__option--quick>.offer_verticalLine--left {
         display: none;
     }
 
-    .offer__option--gentle>.offer_verticalLine--left {
+    .offer__option--gentle>.offer_verticalLine--left,
+    .offer__option--gentle>.offer_verticalLine--right {
         display: none;
     }
 
