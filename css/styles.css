@@ -1975,7 +1975,7 @@ body {
 
     .planDescription__logo {
         width: 10%;
-        content: url("/img/logoWhite.svg");
+        content: url("../img/logoWhite.svg");
     }
 
     .planDescription__title {
