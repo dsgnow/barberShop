@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
 /* font-family: 'Cinzel', serif; */
 
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +17,7 @@ body {
     margin: 0 auto;
     min-width: 200px;
 }
+
 
 /* ANIMATIONSs */
 @keyframes slideDown {
@@ -2102,6 +2104,10 @@ body {
     right: -20%;
 }
 
+.columnTextsContact__link {
+    text-decoration: none;
+    color: white;
+}
 
 .mapTexts {
     height: 25vh;
