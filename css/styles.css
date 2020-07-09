@@ -257,6 +257,7 @@ body {
     /* background: rgb(30, 54, 93);
     background: linear-gradient(0deg, rgba(30, 54, 93, 1) 11%, rgba(15, 29, 55, 1) 53%, rgba(11, 25, 50, 1) 100%); */
     position: relative;
+    background-color: white;
 
 }
 
@@ -1545,7 +1546,9 @@ body {
     color: #222;
 }
 
-.thumbnail {}
+.planDescription__fixedImg {
+    display: none;
+}
 
 .offer {
     width: 100vw;
@@ -1990,8 +1993,8 @@ body {
         background: rgba(0, 0, 0, 0.5);
     }
 
-    .thumbnail {
-        /* display: inline-block; */
+    .planDescription__fixedImg {
+        display: block;
         bottom: 0;
         top: 0;
         left: 0;
