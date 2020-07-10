@@ -195,7 +195,7 @@ const slideIt = function (side) {
     setTimeout(function () {
         rightSlide.style.pointerEvents = "auto";
         leftSlide.style.pointerEvents = "auto";
-    }, 2000);
+    }, 700);
 
     offers.forEach(function (offer, index) {
         if (offer.classList.contains('offer__option--active')) {

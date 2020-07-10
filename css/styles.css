@@ -1583,7 +1583,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    animation: removalRight 2s;
+    animation: removalRight 1s;
     animation-fill-mode: forwards;
 }
 
@@ -1595,7 +1595,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    animation: removalLeft 2s;
+    animation: removalLeft 1s;
     animation-fill-mode: forwards;
 }
 
@@ -1607,7 +1607,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    animation: showInRight 3s;
+    animation: showInRight 2s;
     animation-fill-mode: forwards;
 }
 
@@ -1619,7 +1619,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    animation: showInLeft 3s;
+    animation: showInLeft 2s;
     animation-fill-mode: forwards;
 }
 
