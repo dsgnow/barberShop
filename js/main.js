@@ -45,10 +45,16 @@ const $hambSpan = $('.navBurger__span');
 const $navLinks = $('.nav__link');
 let hambActiveFlag = false;
 let mql = window.matchMedia("(orientation: portrait)");
-if (mql) {
+
+if (mql.matches) {
+    $hambSpan.removeClass('navBurger__span--white');
+    $hambSpan.addClass('navBurger__span--black');
+} else {
     $hambSpan.removeClass('navBurger__span--black');
     $hambSpan.addClass('navBurger__span--white');
 }
+
+
 
 
 // appear elements when scroll //
