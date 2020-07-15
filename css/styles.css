@@ -1476,7 +1476,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     align-self: center;
     position: relative;
     width: 90%;
@@ -1871,15 +1871,23 @@ body {
 
 @media (orientation: landscape) and (min-width: 1366px) {
 
+    .wrapPlan {
+        height: auto;
+    }
+
     .offerWrap3 {
+        display: none;
         position: absolute;
         display: flex;
         flex-direction: row;
         justify-content: center;
         height: 75vh;
         background-color: white;
-        flex-shrink: inherit;
         z-index: 1;
+        margin-top: 5%;
+        min-height: 600px;
+        background-color: white;
+
     }
 
     .offerWrap3.offer__option--active {
@@ -1890,22 +1898,30 @@ body {
     .planDescription__logo {
         width: 10%;
         content: url("../img/logoWhite.svg");
+        margin: unset;
     }
 
     .planDescription__title {
         font-size: 30px;
         color: white;
+        margin-top: 20px;
     }
 
     .planDescription__hl {
         width: 50%;
         color: white;
+        margin: unset;
     }
 
     .planDescription {
         width: 100vw;
         height: 30vh;
         background: rgba(0, 0, 0, 0.5);
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .planDescription__fixedImg {
@@ -1926,15 +1942,13 @@ body {
     .offer {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
         width: 100vw;
         height: 70vh;
         margin: unset;
         padding: unset;
         margin: 0 auto;
-        background-color: #fff;
+        background-color: white;
+        min-height: 600px;
     }
 
     .offer__option {
@@ -1946,7 +1960,8 @@ body {
         width: 29%;
         margin: unset;
         padding: unset;
-        height: 70vh;
+
+
     }
 
     .offer__title {
@@ -1978,8 +1993,8 @@ body {
 
 
 
-    .offer__option--quick>.offer_verticalLine--right,
-    .offer__option--quick>.offer_verticalLine--left,
+    .offer__option--classic>.offer_verticalLine--right,
+    .offer__option--classic>.offer_verticalLine--left,
     .offer__option--beard>.offer_verticalLine--right,
     .offer__option--beard>.offer_verticalLine--left {
         display: none;
