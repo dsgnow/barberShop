@@ -198,8 +198,11 @@ let offers = [];
 
 // clear animations on resize //
 
-$(window).on('resize ', function () {
-    if (widthMinMedia.matches) {
+let width = $(window).width(),
+    height = $(window).height();
+
+$(window).on('resize', function () {
+    if ((widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
         document.querySelectorAll('.offer__option').forEach(function (offer, index) {
             offer.classList.remove('offer__option--showInLeft');
             offer.classList.remove('offer__option--showInRight');
