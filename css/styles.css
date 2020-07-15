@@ -1934,15 +1934,14 @@ body {
         display: block;
         bottom: 0;
         top: 0;
-        left: 0;
-        right: 0;
-        min-width: 100%;
         min-height: 100%;
-        width: 90%;
+        width: 100%;
+        max-width: 2000px;
         position: fixed;
         z-index: -99;
         opacity: 1;
         background-color: #222;
+
     }
 
     .offer {

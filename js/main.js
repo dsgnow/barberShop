@@ -214,7 +214,7 @@ $(window).on('resize', function () {
         document.querySelectorAll('.offer__option')[0].classList.add('offer__option--active');
         leftSlide.classList.remove('offer__navigation--active');
         rightSlide.classList.add('offer__navigation--active');
-    } else {
+    } else if ((!widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
         document.querySelectorAll('.offerWrap3').forEach(function (offer, index) {
             offer.classList.remove('offer__option--showInLeft');
             offer.classList.remove('offer__option--showInRight');
