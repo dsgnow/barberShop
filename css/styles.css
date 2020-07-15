@@ -643,7 +643,7 @@ body {
 }
 
 .columnTexts_title {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     width: 80%;
     color: white;
@@ -747,7 +747,7 @@ body {
     }
 
     .columnTexts_title {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .columnTexts_button {
@@ -1146,7 +1146,7 @@ body {
 
 .columnTextsAbout__descriptionText {
     font-size: 12px;
-    text-align: justify;
+    text-align: left;
     transform: translateY(-600%);
 }
 
@@ -1292,7 +1292,7 @@ body {
 
     .columnTextsAbout__descriptionText {
         font-size: 12px;
-        text-align: center;
+        text-align: left;
     }
 
     .columnTexts_buttonWrap {
@@ -1322,7 +1322,7 @@ body {
 
     .columnTextsAbout__descriptionText {
         font-size: 12px;
-        text-align: justify;
+        text-align: left;
     }
 
     .columnTextsAbout__imgLogo {
@@ -1392,6 +1392,7 @@ body {
 
     .columnTextsAbout__descriptionText {
         font-size: 18px;
+        text-align: justify;
     }
 
 }
