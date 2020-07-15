@@ -2001,18 +2001,16 @@ body {
 
 
 
-    .offer__option--classic>.offer_verticalLine--right,
-    .offer__option--classic>.offer_verticalLine--left,
-    .offer__option--beard>.offer_verticalLine--right,
-    .offer__option--beard>.offer_verticalLine--left {
+    .offer_verticalLine--right,
+    .offer_verticalLine--left {
         display: none;
     }
 
-    .offer__option--cover>.offer_verticalLine--left,
-    .offer__option--cover>.offer_verticalLine--right,
-    .offer__option--cover>.offer_verticalLine--left,
-    .offer__option--cover>.offer_verticalLine--right {
-        display: none;
+    .offer__option--quick>.offer__WrapNoButton>.offer_verticalLine--left,
+    .offer__option--quick>.offer_verticalLine--right,
+    .offer__option--combo>.offer__WrapNoButton>.offer_verticalLine--left,
+    .offer__option--combo>.offer_verticalLine--right {
+        display: block;
     }
 
 
