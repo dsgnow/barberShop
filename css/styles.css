@@ -1086,52 +1086,6 @@ body {
     animation-fill-mode: forwards;
 }
 
-.columnImagesAbout__absoluteTexts {
-    position: absolute;
-    right: 2%;
-    top: 30%;
-    font-size: 20px;
-    color: white;
-    transform: rotate(90deg);
-    font-weight: 700;
-    z-index: 999;
-}
-
-.columnImagesAbout__text {
-    display: block;
-    text-align: center;
-}
-
-.columnImagesAbout__text--large {
-    opacity: 0;
-    color: #343338;
-}
-
-.columnImagesAbout__text--large.columnImagesAbout__text--fadeIn {
-    animation-delay: 0s;
-}
-
-
-
-.columnImagesAbout__text--mid {
-    opacity: 0;
-    color: #343338;
-}
-
-.columnImagesAbout__text--mid.columnImagesAbout__text--fadeIn {
-
-    animation-delay: 1s;
-}
-
-.columnImagesAbout__text--small {
-    opacity: 0;
-    color: #616064;
-}
-
-.columnImagesAbout__text--small.columnImagesAbout__text--fadeIn {
-    animation-delay: 2s;
-}
-
 .columnImagesAbout__text--fadeIn {
     animation: fadeIn 3s;
     animation-fill-mode: forwards;
@@ -1148,7 +1102,6 @@ body {
     animation: anvil .5s;
     animation-fill-mode: forwards;
 }
-
 
 
 .columnTextsAbout__wrapIcons {
@@ -1200,14 +1153,6 @@ body {
 .columnTextsAbout__descriptionText--active {
     animation: fallUp 1s;
     animation-fill-mode: forwards;
-}
-
-@media (orientation: portrait) and (min-width: 321px) {
-
-    .columnImagesAbout__absoluteTexts {
-        right: 5%;
-    }
-
 }
 
 
@@ -1271,10 +1216,6 @@ body {
         right: 50px;
     }
 
-    .columnImagesAbout__absoluteTexts {
-        right: 5%;
-        font-size: 35px;
-    }
 
 }
 
@@ -1309,10 +1250,6 @@ body {
         margin: 20px 20px 0 20px;
     }
 
-    .columnImagesAbout__absoluteTexts {
-        right: 5%;
-        font-size: 45px;
-    }
 
 }
 
@@ -1440,12 +1377,6 @@ body {
         margin: 10px 20px 0 20px;
     }
 
-    .columnImagesAbout__absoluteTexts {
-        right: 5%;
-        top: 45%;
-        font-size: 30px;
-    }
-
 }
 
 @media (orientation: landscape) and (min-width: 1280px) {
@@ -1461,11 +1392,6 @@ body {
 
     .columnTextsAbout__descriptionText {
         font-size: 18px;
-    }
-
-    .columnImagesAbout__absoluteTexts {
-        top: 40%;
-        font-size: 35px;
     }
 
 }
@@ -1496,12 +1422,6 @@ body {
 
     .columnTextsAbout__imgLogo {
         margin-top: 60px;
-    }
-
-    .columnImagesAbout__absoluteTexts {
-        top: 43%;
-        font-size: 40px;
-        right: 20%;
     }
 
 }
@@ -1548,6 +1468,7 @@ body {
     display: none;
 }
 
+
 .offer {
     width: 100vw;
     height: 70vh;
@@ -1558,7 +1479,9 @@ body {
     align-self: center;
     position: relative;
     width: 90%;
+    flex-wrap: nowrap;
 }
+
 
 .offer__option {
     display: none;
@@ -1623,6 +1546,7 @@ body {
 
 .offer__title {
     font-size: 30px;
+    text-align: center;
 }
 
 .offer__price {
@@ -1946,30 +1870,21 @@ body {
 
 @media (orientation: landscape) and (min-width: 1366px) {
 
-    .offer__option--removalRight {
-        animation: none;
-        position: static;
+    .offerWrap3 {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 75vh;
+        background-color: white;
+        flex-shrink: inherit;
+        z-index: 1;
     }
 
-    .offer__option--removalLeft {
-        animation: none;
-        position: static;
+    .offerWrap3.offer__option--active {
+        z-index: 99;
     }
 
-    .offer__option--showInRight {
-        animation: none;
-        position: static;
-    }
-
-    .offer__option--showInLeft {
-        animation: none;
-        position: static;
-    }
-
-    .planDescription {
-        width: 100vw;
-        height: 40vh;
-    }
 
     .planDescription__logo {
         width: 10%;
@@ -1987,6 +1902,7 @@ body {
     }
 
     .planDescription {
+        width: 100vw;
         height: 30vh;
         background: rgba(0, 0, 0, 0.5);
     }
@@ -2018,7 +1934,6 @@ body {
         padding: unset;
         margin: 0 auto;
         background-color: #fff;
-        padding-top: 50px;
     }
 
     .offer__option {
@@ -2027,9 +1942,10 @@ body {
         align-items: center;
         justify-content: center;
         align-self: flex-start;
-        width: 30%;
+        width: 29%;
         margin: unset;
         padding: unset;
+        height: 70vh;
     }
 
     .offer__title {
@@ -2054,18 +1970,24 @@ body {
     }
 
     .offer__navigation {
-        display: none;
+        margin-top: 3%;
+        width: 120px;
     }
+
 
 
 
     .offer__option--quick>.offer_verticalLine--right,
-    .offer__option--quick>.offer_verticalLine--left {
+    .offer__option--quick>.offer_verticalLine--left,
+    .offer__option--beard>.offer_verticalLine--right,
+    .offer__option--beard>.offer_verticalLine--left {
         display: none;
     }
 
-    .offer__option--gentle>.offer_verticalLine--left,
-    .offer__option--gentle>.offer_verticalLine--right {
+    .offer__option--cover>.offer_verticalLine--left,
+    .offer__option--cover>.offer_verticalLine--right,
+    .offer__option--cover>.offer_verticalLine--left,
+    .offer__option--cover>.offer_verticalLine--right {
         display: none;
     }
 
@@ -2306,8 +2228,7 @@ footer p {
     .columnTexts,
     .wrapAbout,
     .columnImagesAbout,
-    .columnTextsAbout,
-    .wrapPlan {
+    .columnTextsAbout {
         min-height: 800px;
     }
 
