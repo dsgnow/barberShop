@@ -1458,11 +1458,13 @@ body {
     font-size: 16px;
     margin: 10px;
     font-weight: 300;
+    z-index: 99;
 }
 
 .planDescription__hl {
     width: 90%;
     color: #222;
+    z-index: 99;
 }
 
 .planDescription__fixedImg {
@@ -1744,7 +1746,7 @@ body {
     }
 
     .planDescription {
-        width: 0vw;
+        display: none;
         height: 100vh;
     }
 
@@ -1752,11 +1754,16 @@ body {
     .offer {
         width: 70vw;
         height: 100vh;
+        flex-wrap: wrap;
+        min-height: 320px;
     }
 
     .offer__option {
         width: 100%;
+        min-height: 320px;
     }
+
+
 
     .offer__title {
         font-size: 27px;
@@ -1798,6 +1805,12 @@ body {
 
 }
 
+@media (orientation: landscape) and (min-height: 600px) {
+    .planDescription {
+        display: flex;
+    }
+}
+
 
 @media (orientation: landscape) and (min-width: 768px) {
 
@@ -1826,6 +1839,7 @@ body {
     .offer {
         width: 70vw;
         height: 50vh;
+        min-height: 380px;
     }
 
     .offer__option {
@@ -2015,11 +2029,6 @@ body {
 
 }
 
-@media (orientation: landscape) and (max-height: 600px) {
-    .planDescription {
-        display: none;
-    }
-}
 
 
 /*  CONTACT SECTION */
@@ -2241,6 +2250,25 @@ footer p {
 
 
 /* wrappers min width and height */
+
+@media (orientation: landscape) {
+
+    .wrapStart,
+    .wrapAbout,
+    .columnTextsAbout,
+    .columnImages,
+    .wrapPlan {
+        min-height: 320px;
+    }
+
+    .wrapContact,
+    .columnContact,
+    .columnTextsContact,
+    .columnTexts {
+        min-height: 320px;
+    }
+
+}
 
 @media (orientation: landscape) and (min-width: 1200px) {
 
