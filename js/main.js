@@ -35,7 +35,7 @@ const fadeIntexts = document.querySelectorAll('.columnImagesAbout__text');
 const $columnTextsContact = $('.columnTextsContact');
 const columnTextsContactFromTop = $columnTextsContact.offset().top;
 const columnTextsContactHeight = $columnTextsContact.outerHeight();
-const allContactTexts = [...document.querySelectorAll('.columnTextsContact>*')];
+const allContactTexts = [...document.querySelectorAll('.columnTextsContact>*,address>*')];
 
 // hamburger //
 const $hambPop = $('.navBurger');
