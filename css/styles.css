@@ -2023,7 +2023,7 @@ body {
     .offer__option--quick>.offer_verticalLine--right,
     .offer__option--combo>.offer__WrapNoButton>.offer_verticalLine--left,
     .offer__option--combo>.offer_verticalLine--right {
-        display: block;
+        display: absolute;
     }
 
 
