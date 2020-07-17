@@ -202,6 +202,7 @@ let width = $(window).width(),
     height = $(window).height();
 
 $(window).on('resize orientationchange', function () {
+    console.log('new2');
     if ((!widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
         document.querySelectorAll('.offer__option').forEach(function (offer, index) {
             offer.classList.remove('offer__option--showInLeft');
@@ -209,7 +210,6 @@ $(window).on('resize orientationchange', function () {
             offer.classList.remove('offer__option--removalLeft');
             offer.classList.remove('offer__option--removalRight');
             offer.classList.remove('offer__option--active');
-            offer.hide();
         })
 
         document.querySelectorAll('.offer__option')[0].classList.add('offer__option--active');
