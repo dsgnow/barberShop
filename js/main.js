@@ -359,3 +359,17 @@ btnFacebook.on('click', function () {
 btnInsta.on('click', function () {
     window.open('https://www.instagram.com/kuznia_dzentelmenow/?igshid=1erm1rgcgohtt&fbclid=IwAR3SSynwriXx75SGl2Tt1WRjsjQ6IJuUhJKzWo0k6fcw-O7aTkd538FBDSE', '_blank');
 })
+
+//cookies//
+function WHCheckCookies() {
+    if (!localStorage.cookies_accepted) {
+        var cookies_message = document.getElementById("cookies-message");
+        cookies_message.style.display = "block"
+    }
+}
+window.onload = WHCheckCookies;
+
+function WHCloseCookiesWindow() {
+    localStorage.cookies_accepted = true;
+    document.getElementById("cookies-message-container").removeChild(document.getElementById("cookies-message"));
+}

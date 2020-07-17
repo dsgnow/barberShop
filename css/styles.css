@@ -2312,3 +2312,62 @@ footer p {
         min-height: 400px;
     }
 }
+
+#cookies-message {
+    font-size: 8px;
+    color: white;
+    padding: 12px 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+#accept-cookies-checkbox {
+    background-color: white;
+    color: black;
+    border: solid 1px white;
+    transition: all 0.5s;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#accept-cookies-checkbox:hover {
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+
+
+@media (orientation:portrait) {
+    #cookies-message {
+        font-size: 8px;
+    }
+}
+
+@media (orientation:portrait) and (min-width: 768px) {
+    #cookies-message {
+        font-size: 14px;
+    }
+}
+
+@media (orientation:landscape) {
+    #cookies-message {
+        font-size: 10px;
+    }
+}
+
+@media (orientation:landscape) and (min-width: 1366px) {
+    #cookies-message {
+        font-size: 14px;
+    }
+}
