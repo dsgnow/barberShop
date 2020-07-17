@@ -196,38 +196,46 @@ const widthMedia = window.matchMedia("(max-width: 1365px)")
 const widthMinMedia = window.matchMedia("(min-width: 1365px)")
 let offers = [];
 
-// clear animations on resize //
+function cleanOfferOption() {
+    document.querySelectorAll('.offer__option').forEach(function (offer, index) {
+        offer.classList.remove('offer__option--showInLeft');
+        offer.classList.remove('offer__option--showInRight');
+        offer.classList.remove('offer__option--removalLeft');
+        offer.classList.remove('offer__option--removalRight');
+        offer.classList.remove('offer__option--active');
+    })
+    document.querySelectorAll('.offer__option')[0].classList.add('offer__option--active');
+}
 
+function cleanOfferWrap3Option() {
+    document.querySelectorAll('.offerWrap3').forEach(function (offer, index) {
+        offer.classList.remove('offer__option--showInLeft');
+        offer.classList.remove('offer__option--showInRight');
+        offer.classList.remove('offer__option--removalLeft');
+        offer.classList.remove('offer__option--removalRight');
+        offer.classList.remove('offer__option--active');
+    })
+    document.querySelectorAll('.offerWrap3')[0].classList.add('offer__option--active');
+}
+
+// clear animations on resize //
 let width = $(window).width(),
     height = $(window).height();
 
 $(window).on('resize orientationchange', function () {
-    console.log('new2');
     if ((!widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
-        document.querySelectorAll('.offer__option').forEach(function (offer, index) {
-            offer.classList.remove('offer__option--showInLeft');
-            offer.classList.remove('offer__option--showInRight');
-            offer.classList.remove('offer__option--removalLeft');
-            offer.classList.remove('offer__option--removalRight');
-            offer.classList.remove('offer__option--active');
-        })
 
-        document.querySelectorAll('.offer__option')[0].classList.add('offer__option--active');
+        cleanOfferOption();
         document.querySelectorAll('.offer__option')[0].classList.add('offer__option--showInRight');
         leftSlide.classList.remove('offer__navigation--active');
         rightSlide.classList.add('offer__navigation--active');
 
 
     } else if ((widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
-        document.querySelectorAll('.offerWrap3').forEach(function (offer, index) {
-            offer.classList.remove('offer__option--showInLeft');
-            offer.classList.remove('offer__option--showInRight');
-            offer.classList.remove('offer__option--removalLeft');
-            offer.classList.remove('offer__option--removalRight');
-            offer.classList.remove('offer__option--active');
-        })
 
-        document.querySelectorAll('.offerWrap3')[0].classList.add('offer__option--active');
+        cleanOfferWrap3Option();
+        cleanOfferOption();
+        document.querySelectorAll('.offerWrap3')[0].classList.add('offer__option--showInRight');
         leftSlide.classList.remove('offer__navigation--active');
         rightSlide.classList.add('offer__navigation--active');
     }
