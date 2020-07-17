@@ -235,7 +235,7 @@ $(window).on('resize orientationchange', function () {
 
         cleanOfferWrap3Option();
         cleanOfferOption();
-        document.querySelectorAll('.offerWrap3')[0].classList.add('offer__option--showInRight');
+        // document.querySelectorAll('.offerWrap3')[0].classList.add('offer__option--showInRight');
         leftSlide.classList.remove('offer__navigation--active');
         rightSlide.classList.add('offer__navigation--active');
     }
