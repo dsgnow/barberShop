@@ -213,6 +213,7 @@ $(window).on('resize orientationchange', function () {
         })
 
         document.querySelectorAll('.offer__option')[0].classList.add('offer__option--active');
+        document.querySelectorAll('.offer__option')[0].classList.add('offer__option--showInRight');
         leftSlide.classList.remove('offer__navigation--active');
         rightSlide.classList.add('offer__navigation--active');
 
