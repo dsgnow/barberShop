@@ -201,8 +201,8 @@ let offers = [];
 let width = $(window).width(),
     height = $(window).height();
 
-$(window).on('resize', function () {
-    if ((widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
+$(window).on('resize orientationchange', function () {
+    if ((!widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
         document.querySelectorAll('.offer__option').forEach(function (offer, index) {
             offer.classList.remove('offer__option--showInLeft');
             offer.classList.remove('offer__option--showInRight');
@@ -214,7 +214,9 @@ $(window).on('resize', function () {
         document.querySelectorAll('.offer__option')[0].classList.add('offer__option--active');
         leftSlide.classList.remove('offer__navigation--active');
         rightSlide.classList.add('offer__navigation--active');
-    } else if ((!widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
+
+
+    } else if ((widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
         document.querySelectorAll('.offerWrap3').forEach(function (offer, index) {
             offer.classList.remove('offer__option--showInLeft');
             offer.classList.remove('offer__option--showInRight');
