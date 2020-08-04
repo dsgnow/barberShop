@@ -208,7 +208,6 @@ function cleanOfferOption() {
     })
     document.querySelectorAll('.offer__option')[0].classList.add('offer__option--active');
     document.querySelectorAll('.offerWrap3')[0].classList.add('offer__option--active');
-    cleanOffersSmallFlag = false;
 }
 
 function cleanOfferWrap3Option() {
@@ -220,38 +219,41 @@ function cleanOfferWrap3Option() {
         offer.classList.remove('offer__option--active');
     })
     document.querySelectorAll('.offerWrap3')[0].classList.add('offer__option--active');
-    cleanOffersLargeFlag = false;
 }
 
 // clear animations on resize //
 let width = $(window).width(),
     height = $(window).height();
 
-$(window).on('resize', function () {
+$(window).on('resize orientationchange', function () {
 
 
-    if ((!widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
+    if ((!widthMinMedia.matches)) {
         console.log(`${cleanOffersSmallFlag} small flag`)
+        cleanOffersLargeFlag = true;
         if (cleanOffersSmallFlag) {
             cleanOfferOption();
             cleanOfferWrap3Option();
             document.querySelectorAll('.offer__option')[0].classList.add('offer__option--showInRight');
             leftSlide.classList.remove('offer__navigation--active');
             rightSlide.classList.add('offer__navigation--active');
+            cleanOffersSmallFlag = false;
         }
-        cleanOffersLargeFlag = true;
+
     }
 
-    if ((widthMinMedia.matches) && ($(window).width() != width || $(window).height() != height)) {
+    if ((widthMinMedia.matches)) {
         console.log(`${cleanOffersLargeFlag} large flag`)
+        cleanOffersSmallFlag = true;
         if (cleanOffersLargeFlag) {
             cleanOfferWrap3Option();
             cleanOfferOption();
             // document.querySelectorAll('.offerWrap3')[0].classList.add('offer__option--showInRight');
             leftSlide.classList.remove('offer__navigation--active');
             rightSlide.classList.add('offer__navigation--active');
+            cleanOffersLargeFlag = false;
         }
-        cleanOffersSmallFlag = true;
+
     }
 })
 
