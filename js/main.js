@@ -383,7 +383,7 @@ btnReservation.on('click', function () {
 })
 
 btnFacebook.on('click', function () {
-    window.open('https://www.facebook.com/KUZNIADZENTELMENOW/', '_blank');
+    window.open('https://booksy.com/pl-pl/102596_kuznia-dzentelmenow-barber-shop_barber-shop_12338_zabrze?fbclid=IwAR2ZqdhK3hlkGjq-Ufs5ZKe3pgxhejYsID7WDmE5JLeek6ytRnyJqDVV8FA', '_blank');
 })
 
 btnInsta.on('click', function () {
